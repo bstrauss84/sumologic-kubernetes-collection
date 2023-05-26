@@ -661,9 +661,9 @@ fluentd:
     enabled: true
     encoding: gzip
 
-  securityContext:
-    ## The group ID of all processes in the statefulset containers. By default this needs to be fluent(999).
-    fsGroup: 999
+#  securityContext:
+    ## The group ID of all processes in the statefulset containers. By default this needs to be fluent(998).
+#    fsGroup: 998
 
   ## Add custom labels to all fluentd sts pods(logs, metrics, events)
   podLabels: {}
@@ -3836,10 +3836,10 @@ metadata:
     # tag: ""
     pullPolicy: IfNotPresent
 
-  securityContext:
+#  securityContext:
     ## ToDo: Verify following comment
-    ## The group ID of all processes in the statefulset containers. By default this needs to be otelcol(999).
-    fsGroup: 999
+    ## The group ID of all processes in the statefulset containers. By default this needs to be otelcol(998).
+#    fsGroup: 998
 
   ## Add custom labels to all otelcol sts pods(logs and metrics)
   podLabels: {}
@@ -4243,10 +4243,10 @@ otelevents:
     ## Add custom annotations only to events sts pods
     podAnnotations: {}
 
-    securityContext:
+#    securityContext:
       ## ToDo: Verify following comment
-      ## The group ID of all processes in the statefulset containers. By default this needs to be otelcol(999).
-      fsGroup: 999
+      ## The group ID of all processes in the statefulset containers. By default this needs to be otelcol(998).
+#      fsGroup: 998
 
     ## Set securityContext for containers running in pods in events statefulset.
     containers:
